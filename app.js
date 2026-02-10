@@ -1,17 +1,3 @@
-    // 1. FULLSCREEN LOGIC
-    function toggleFullScreen() {
-        if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen().catch(err => {
-                alert(`Error attempting to enable full-screen mode: ${err.message}`);
-            });
-        } else {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            }
-        }
-    }
-
-    // 2. QUESTIONS ARRAY
     const questions = [
         "Graphical representation of an algorithm is called:",
         "A finite set of steps to solve a problem is:",
@@ -49,30 +35,59 @@
         "Instruction blocks are connected like:"
     ];
 
-    // 3. QUIZ LOGIC
     let currentIdx = 0;
     let timeLeft = 10;
     let timerObj;
+    let isPaused = false;
+
+    function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else {
+            document.exitFullscreen();
+        }
+    }
+
+    function togglePause() {
+        isPaused = !isPaused;
+        const icon = document.getElementById('pause-icon');
+        const bar = document.getElementById('progress-bar');
+        
+        if (isPaused) {
+            icon.className = 'fas fa-play';
+            bar.classList.add('paused');
+        } else {
+            icon.className = 'fas fa-pause';
+            bar.classList.remove('paused');
+        }
+    }
 
     function startQuiz() {
         document.getElementById('start-screen').classList.add('hidden');
         document.getElementById('quiz-screen').classList.remove('hidden');
+        document.getElementById('pause-btn').classList.remove('hidden');
+        document.getElementById('prev-btn').classList.remove('hidden');
+        document.getElementById('next-btn').classList.remove('hidden');
         loadQuestion();
     }
 
     function loadQuestion() {
+        if (currentIdx < 0) currentIdx = 0;
+        
         if (currentIdx < questions.length) {
-            // Update UI
+            // Update Text
             document.getElementById('q-number').innerText = `QUESTION ${currentIdx + 1}`;
             document.getElementById('q-text').innerText = questions[currentIdx];
             
             // Reset Reversing Timer
             timeLeft = 10;
             document.getElementById('timer-display').innerText = timeLeft;
+            isPaused = false;
+            document.getElementById('pause-icon').className = 'fas fa-pause';
 
             // Reset Animated Bar
             const bar = document.getElementById('progress-bar');
-            bar.classList.remove('animate-bar');
+            bar.classList.remove('animate-bar', 'paused');
             void bar.offsetWidth; 
             bar.classList.add('animate-bar');
 
@@ -85,17 +100,39 @@
     }
 
     function runTimer() {
-        timeLeft--;
-        document.getElementById('timer-display').innerText = timeLeft;
+        if (!isPaused) {
+            timeLeft--;
+            document.getElementById('timer-display').innerText = timeLeft;
 
-        if (timeLeft <= 0) {
+            if (timeLeft <= 0) {
+                nextQuestion();
+            }
+        }
+    }
+
+    function nextQuestion() {
+        clearInterval(timerObj);
+        currentIdx++;
+        if (currentIdx < questions.length) {
+            loadQuestion();
+        } else {
+            showEndScreen();
+        }
+    }
+
+    function prevQuestion() {
+        if (currentIdx > 0) {
             clearInterval(timerObj);
-            currentIdx++;
+            currentIdx--;
             loadQuestion();
         }
     }
 
     function showEndScreen() {
+        clearInterval(timerObj);
         document.getElementById('quiz-screen').classList.add('hidden');
+        document.getElementById('pause-btn').classList.add('hidden');
+        document.getElementById('prev-btn').classList.add('hidden');
+        document.getElementById('next-btn').classList.add('hidden');
         document.getElementById('end-screen').classList.remove('hidden');
     }

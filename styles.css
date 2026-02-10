@@ -1,38 +1,35 @@
-    /* Force no scrollbars */
     html, body { 
-        margin: 0; 
-        padding: 0; 
-        width: 100%; 
-        height: 100%; 
-        overflow: hidden; 
-        background-color: #000; 
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
+        margin: 0; padding: 0; width: 100%; height: 100%; 
+        overflow: hidden; background-color: #000; 
+        display: flex; justify-content: center; align-items: center; 
     }
 
     .slide-container { 
-        width: 100vw; 
-        height: 100vh; 
-        position: relative; 
-        background-color: #4f46e5; 
-        color: white; 
-        overflow: hidden; 
+        width: 100vw; height: 100vh; position: relative; 
+        background-color: #4f46e5; color: white; overflow: hidden; 
     }
 
-    /* Fullscreen Button */
-    .fs-button {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 100;
-        background: rgba(255,255,255,0.2);
-        padding: 10px;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: 0.3s;
+    /* Controls */
+    .fs-button, .pause-button {
+        position: absolute; top: 20px; z-index: 100;
+        background: rgba(255,255,255,0.2); padding: 15px;
+        border-radius: 50%; cursor: pointer; transition: 0.3s;
+        width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
     }
-    .fs-button:hover { background: rgba(255,255,255,0.4); }
+    .fs-button { right: 20px; }
+    .pause-button { right: 100px; }
+    .fs-button:hover, .pause-button:hover { background: rgba(255,255,255,0.4); }
+
+    /* Navigation Arrows */
+    .nav-arrow {
+        position: absolute; top: 50%; transform: translateY(-50%);
+        z-index: 100; background: rgba(0,0,0,0.2); padding: 20px;
+        border-radius: 10px; cursor: pointer; transition: 0.3s;
+        color: white; border: none; font-size: 40px;
+    }
+    .nav-arrow:hover { background: rgba(0,0,0,0.5); }
+    .nav-left { left: 20px; }
+    .nav-right { right: 20px; }
 
     .decoration-circle { position: absolute; background-color: #4338ca; border-radius: 50%; z-index: 0; opacity: 0.5; }
     .circle-top { top: -150px; right: -100px; width: 500px; height: 500px; }
@@ -40,135 +37,24 @@
     
     .content-wrapper { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10; padding: 40px; text-align: center; }
     
-    /* Reversing Timer */
     .countdown-circle {
-        width: 110px;
-        height: 110px;
-        border: 8px solid #fbbf24;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 52px;
-        font-weight: 800;
-        margin-bottom: 30px;
-        background: rgba(0,0,0,0.3);
-        color: #fbbf24;
+        width: 110px; height: 110px; border: 8px solid #fbbf24;
+        border-radius: 50%; display: flex; justify-content: center;
+        align-items: center; font-size: 52px; font-weight: 800;
+        margin-bottom: 30px; background: rgba(0,0,0,0.3); color: #fbbf24;
     }
 
     .question-badge { background-color: #fbbf24; color: #1e1b4b; padding: 10px 40px; border-radius: 9999px; font-weight: 800; font-size: 26px; margin-bottom: 30px; }
-    .question-text { font-size: 58px; line-height: 1.2; font-weight: 700; max-width: 1100px; }
+    .question-text { font-size: clamp(30px, 5vw, 58px); line-height: 1.2; font-weight: 700; max-width: 900px; }
     
-    /* Bottom Progress Bar */
     .timer-bar-container { position: absolute; bottom: 0; left: 0; width: 100%; height: 15px; background: rgba(0,0,0,0.3); }
     .timer-bar-fill { height: 100%; background: #fbbf24; width: 100%; }
+    
+    /* Animation states */
     .animate-bar { animation: shrink 10s linear forwards; }
+    .paused { animation-play-state: paused !important; }
+
     @keyframes shrink { from { width: 100%; } to { width: 0%; } }
 
     .btn-start { background-color: #fbbf24; color: #1e1b4b; padding: 25px 80px; border-radius: 15px; font-size: 38px; font-weight: 800; cursor: pointer; border: none; }
-    
     .hidden { display: none !important; }
-
-
-
-
-
-
-    /* Core Layout Reset */
-html, body { 
-margin: 0; 
-padding: 0; 
-width: 100%; 
-height: 100%; 
-overflow: hidden; 
-background-color: #000; 
-}
-
-/* Container adapts to any screen size */
-.slide-container { 
-width: 100vw; 
-height: 100vh; 
-position: relative; 
-background-color: #4f46e5; 
-color: white; 
-overflow: hidden; 
-display: flex;
-flex-direction: column;
-}
-
-/* Responsive Content Wrapper */
-.content-wrapper { 
-flex: 1; 
-display: flex; 
-flex-direction: column; 
-justify-content: center; 
-align-items: center; 
-z-index: 10; 
-padding: 5vw; /* Padding scales with width */
-text-align: center; 
-}
-
-/* Scaling Typography */
-.question-text { 
-/* clamp(min, preferred, max) ensures text isn't too small on mobile or too huge on desktop */
-font-size: clamp(24px, 5vw, 58px); 
-line-height: 1.2; 
-font-weight: 700; 
-max-width: 90vw; 
-margin: 0 auto;
-}
-
-.question-badge { 
-background-color: #fbbf24; 
-color: #1e1b4b; 
-padding: 0.8rem 2rem; 
-border-radius: 9999px; 
-font-weight: 800; 
-font-size: clamp(16px, 2.5vw, 26px); 
-margin-bottom: 2rem; 
-}
-
-/* Responsive Timer Circle */
-.countdown-circle {
-width: clamp(70px, 12vw, 110px);
-height: clamp(70px, 12vw, 110px);
-border: clamp(4px, 0.8vw, 8px) solid #fbbf24;
-border-radius: 50%;
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: clamp(30px, 5vw, 52px);
-font-weight: 800;
-margin-bottom: 2rem;
-background: rgba(0,0,0,0.3);
-color: #fbbf24;
-}
-
-/* Start Button Scaling */
-.btn-start { 
-background-color: #fbbf24; 
-color: #1e1b4b; 
-padding: 1.5rem 4rem; 
-border-radius: 15px; 
-font-size: clamp(20px, 4vw, 38px); 
-font-weight: 800; 
-cursor: pointer; 
-border: none; 
-transition: transform 0.2s;
-}
-
-.btn-start:hover { transform: scale(1.05); }
-
-/* Decoration Scaling */
-.decoration-circle { 
-position: absolute; 
-background-color: #4338ca; 
-border-radius: 50%; 
-z-index: 0; 
-opacity: 0.5; 
-}
-.circle-top { top: -10vh; right: -10vw; width: 40vw; height: 40vw; }
-.circle-bottom { bottom: -10vh; left: -10vw; width: 30vw; height: 30vw; }
-
-/* Progress Bar stays pinned at bottom */
-.timer-bar-container { position: absolute; bottom: 0; left: 0; width: 100%; height: 12px; background: rgba(0,0,0,0.3); }
