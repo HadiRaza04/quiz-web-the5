@@ -1,46 +1,46 @@
     const questions = [
-        "Graphical representation of an algorithm is called:",  // Flowchart
-        "A finite set of steps to solve a problem is:", // Algorithm
-        "The symbol used for \"Decision\" in flowcharts:", // Diamond
-        "A good algorithm should always be:", // Efficient
-        "\"LIFO\" (Last In First Out) principle is used in:", // Stack
-        "\"FIFO\" (First In First Out) principle belongs to:", // Queue
-        "\"Indexing\" is a primary feature of:", // Arrays
-        "Hierarchical data structure (Non-Linear) is:", // Tree
-        "Translates code line-by-line:", // Interpreter
-        "Converts Assembly language to Machine code:", /// Assembler
-        "Logical error in a program is also known as a:", // Bug
-        "Component of IDE used to find and fix errors:", // Debugger
-        "\"Reserved words\" are also known as:", // Keywords
-        "Size of 'int' data type in C++ (standard):", // 4 bytes
-        "A value that cannot be changed during execution:", // Constant
-        "Valid variable name starts with:", // Letter or underscore
-        "Operator used for \"Remainder\":", // Modulo (%)
-        "\\n is an escape sequence used for:", /// New line
-        "&& and || are examples of:", // Logical operators
-        "Symbols for \"Single line comment\" in C++:", // //
-        "\"Iteration\" is another name for:", // Loop
-        "This statement terminates the loop immediately:", // Break
-        "Loop that executes at least once:", // Do-While
-        "\"Multi-way branching\" statement:", // Switch
-        "Variables declared inside a function:", // Local variables
-        "Values passed to a function are called:", // Arguments
-        "main() in C++ is a:", // Function
-        "Which gate is known as an \"Inverter\"?", // NOT gate
-        "The \"Universal Gate\" is:", // NAND gate
-        "In Boolean Algebra, A · A equals:", // A
-        "Result of OR gate is 0 only when:", // Both inputs are 0
-        "Characters or objects in Scratch are called:", // Sprites
-        "Where we drag blocks to create code in Scratch:", // Scripts area
-        "Instruction blocks are connected like:", // jigsaw pieces
-        "\"Push\" and \"Pop\" operations are used in",  // stack
-        "The parallelogram symbol in a flowchart represents:", // input /output
-        "Standardized English-like statements to describe an algorithm:", // Algorithm
-        "Non-linear structure consisting of vertices and edges:", // Graph
-        "Symbol used to end most C++ statements:", // Semicolon (;)
-        "Jump statement used to transfer control to a labeled part of the program:", // Goto
-        "The \"return type\" of a function that does not return any value:", // void
-        "The block category used to move a Sprite:", // Motion
+        "Graphical representation of an algorithm is called:",  // 1- Flowchart
+        "A finite set of steps to solve a problem is:", // 2- Algorithm
+        "The symbol used for \"Decision\" in flowcharts:", // 3- Diamond
+        "A good algorithm should always be:", // 4- Efficient
+        "\"LIFO\" (Last In First Out) principle is used in:", // 5- Stack
+        "\"FIFO\" (First In First Out) principle belongs to:", // 6- Queue
+        "\"Indexing\" is a primary feature of:", // 7- Arrays
+        "Hierarchical data structure (Non-Linear) is:", // 8- Tree
+        "Translates code line-by-line:", // 9- Interpreter
+        "Converts Assembly language to Machine code:", /// 10- Assembler
+        "Logical error in a program is also known as a:", // 11- Bug
+        "Component of IDE used to find and fix errors:", // 12- Debugger
+        "\"Reserved words\" are also known as:", // 13- Keywords
+        "Size of 'int' data type in C++ (standard):", // 14- 4 bytes
+        "A value that cannot be changed during execution:", // 15- Constant
+        "Valid variable name starts with:", // 16- Letter or underscore
+        "Operator used for \"Remainder\":", // 17- Modulo (%)
+        "\\n is an escape sequence used for:", /// 18-  New line
+        "&& and || are examples of:", // 19- Logical operators
+        "Symbols for \"Single line comment\" in C++:", // 20- //
+        "\"Iteration\" is another name for:", // 21- Loop
+        "This statement terminates the loop immediately:", // 22-  Break
+        "Loop that executes at least once:", // 23- Do-While
+        "\"Multi-way branching\" statement:", // 24- Switch
+        "Variables declared inside a function:", // 25- Local variables
+        "Values passed to a function are called:", // 26- Arguments
+        "main() in C++ is a:", // 27 -Function
+        "Which gate is known as an \"Inverter\"?", // 28- NOT gate
+        "The \"Universal Gate\" is:", // 29- NAND gate
+        "In Boolean Algebra, A · A equals:", // 30- A
+        "Result of OR gate is 0 only when:", // 31- Both inputs are 0
+        "Characters or objects in Scratch are called:", // 32- Sprites
+        "Where we drag blocks to create code in Scratch:", // 33- Scripts area
+        "Instruction blocks are connected like:", // 34- jigsaw pieces
+        "\"Push\" and \"Pop\" operations are used in",  // 35- stack
+        "The parallelogram symbol in a flowchart represents:", // 36- input /output
+        "Standardized English-like statements to describe an algorithm:", // 37- Algorithm
+        "Non-linear structure consisting of vertices and edges:", // 38- Graph
+        "Symbol used to end most C++ statements:", // 39- Semicolon (;)
+        "Jump statement used to transfer control to a labeled part of the program:", //  40-  Goto
+        "The \"return type\" of a function that does not return any value:", // 41- void
+        "The block category used to move a Sprite:", // 42- Motion
     ];
 
     let currentIdx = 0;
