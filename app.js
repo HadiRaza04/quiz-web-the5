@@ -1,42 +1,50 @@
     const questions = [
-        "Graphical representation of an algorithm is called:",
-        "A finite set of steps to solve a problem is:",
-        "The symbol used for \"Decision\" in flowcharts:",
-        "A good algorithm should always be:",
-        "\"LIFO\" (Last In First Out) principle is used in:",
-        "\"FIFO\" (First In First Out) principle belongs to:",
-        "\"Indexing\" is a primary feature of:",
-        "Hierarchical data structure (Non-Linear) is:",
-        "Translates code line-by-line:",
-        "Converts Assembly language to Machine code:",
-        "Logical error in a program is also known as a:",
-        "Component of IDE used to find and fix errors:",
-        "\"Reserved words\" are also known as:",
-        "Size of 'int' data type in C++ (standard):",
-        "A value that cannot be changed during execution:",
-        "Valid variable name starts with:",
-        "Operator used for \"Remainder\":",
-        "\\n is an escape sequence used for:",
-        "&& and || are examples of:",
-        "Symbols for \"Single line comment\" in C++:",
-        "\"Iteration\" is another name for:",
-        "This statement terminates the loop immediately:",
-        "Loop that executes at least once:",
-        "\"Multi-way branching\" statement:",
-        "Variables declared inside a function:",
-        "Values passed to a function are called:",
-        "main() in C++ is a:",
-        "Which gate is known as an \"Inverter\"?",
-        "The \"Universal Gate\" is:",
-        "In Boolean Algebra, A · A equals:",
-        "Result of OR gate is 0 only when:",
-        "Characters or objects in Scratch are called:",
-        "Where we drag blocks to create code in Scratch:",
-        "Instruction blocks are connected like:"
+        "Graphical representation of an algorithm is called:",  // Flowchart
+        "A finite set of steps to solve a problem is:", // Algorithm
+        "The symbol used for \"Decision\" in flowcharts:", // Diamond
+        "A good algorithm should always be:", // Efficient
+        "\"LIFO\" (Last In First Out) principle is used in:", // Stack
+        "\"FIFO\" (First In First Out) principle belongs to:", // Queue
+        "\"Indexing\" is a primary feature of:", // Arrays
+        "Hierarchical data structure (Non-Linear) is:", // Tree
+        "Translates code line-by-line:", // Interpreter
+        "Converts Assembly language to Machine code:", /// Assembler
+        "Logical error in a program is also known as a:", // Bug
+        "Component of IDE used to find and fix errors:", // Debugger
+        "\"Reserved words\" are also known as:", // Keywords
+        "Size of 'int' data type in C++ (standard):", // 4 bytes
+        "A value that cannot be changed during execution:", // Constant
+        "Valid variable name starts with:", // Letter or underscore
+        "Operator used for \"Remainder\":", // Modulo (%)
+        "\\n is an escape sequence used for:", /// New line
+        "&& and || are examples of:", // Logical operators
+        "Symbols for \"Single line comment\" in C++:", // //
+        "\"Iteration\" is another name for:", // Loop
+        "This statement terminates the loop immediately:", // Break
+        "Loop that executes at least once:", // Do-While
+        "\"Multi-way branching\" statement:", // Switch
+        "Variables declared inside a function:", // Local variables
+        "Values passed to a function are called:", // Arguments
+        "main() in C++ is a:", // Function
+        "Which gate is known as an \"Inverter\"?", // NOT gate
+        "The \"Universal Gate\" is:", // NAND gate
+        "In Boolean Algebra, A · A equals:", // A
+        "Result of OR gate is 0 only when:", // Both inputs are 0
+        "Characters or objects in Scratch are called:", // Sprites
+        "Where we drag blocks to create code in Scratch:", // Scripts area
+        "Instruction blocks are connected like:", // jigsaw pieces
+        "\"Push\" and \"Pop\" operations are used in",  // stack
+        "The parallelogram symbol in a flowchart represents:", // input /output
+        "Standardized English-like statements to describe an algorithm:", // Algorithm
+        "Non-linear structure consisting of vertices and edges:", // Graph
+        "Symbol used to end most C++ statements:", // Semicolon (;)
+        "Jump statement used to transfer control to a labeled part of the program:", // Goto
+        "The \"return type\" of a function that does not return any value:", // void
+        "The block category used to move a Sprite:", // Motion
     ];
 
     let currentIdx = 0;
-    let timeLeft = 10;
+    let timeLeft = 15;
     let timerObj;
     let isPaused = false;
 
@@ -80,7 +88,7 @@
             document.getElementById('q-text').innerText = questions[currentIdx];
             
             // Reset Reversing Timer
-            timeLeft = 10;
+            timeLeft = 15;
             document.getElementById('timer-display').innerText = timeLeft;
             isPaused = false;
             document.getElementById('pause-icon').className = 'fas fa-pause';

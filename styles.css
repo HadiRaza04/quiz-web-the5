@@ -51,7 +51,7 @@
     .timer-bar-fill { height: 100%; background: #fbbf24; width: 100%; }
     
     /* Animation states */
-    .animate-bar { animation: shrink 10s linear forwards; }
+    .animate-bar { animation: shrink 15s linear forwards; }
     .paused { animation-play-state: paused !important; }
 
     @keyframes shrink { from { width: 100%; } to { width: 0%; } }
