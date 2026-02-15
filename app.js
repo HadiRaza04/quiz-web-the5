@@ -1,16 +1,8 @@
-   const questions = [
-        "The parallelogram symbol in a flowchart represents:", // 36- input /output
-        "Standardized English-like statements to describe an algorithm:", // 37- Pseudo-code
-        "Non-linear structure consisting of vertices and edges:", // 38- Graph
-        "Symbol used to end most C++ statements:", // 39- Semicolon (;)
-        "Jump statement used to transfer control to a labeled part of the program:", // 40- Goto
-        "The \"return type\" of a function that does not return any value:", // 41- void
-        "The block category used to move a Sprite:", // 42- Motion
+const questions = [
         "The 'Oval' symbol in a flowchart represents:", // 43- Start / End
         "The 'Rectangle' symbol in a flowchart is used for:", // 44- Processing
         "Adding an element to the top of a stack is called:", // 45- Push
         "Removing an element from a queue is known as:", // 46- Dequeue
-        
         "A tree node that has no children is called a:", // 47- Leaf node
         "The top-most node of a tree structure is the:", // 48- Root
         "A mistake in the 'grammar' rules of a programming language is a:", // 49- Syntax Error
@@ -30,16 +22,13 @@
         "Gate that gives output 1 if any one input is 1:", // 63- OR Gate
         "The Boolean law where A + 0 = A is called:", // 64- Identity Law
         "Gate formed by combining AND and NOT gates:", // 65- NAND Gate
-        
-
-
-        "The algebraic expression for a NOT gate is usually:", // 66- A' (A bar)
+        "The algebraic expression for a NOT gate is usually:", // 66- A' or bar A
         "Gate that outputs 1 only when inputs are different:", // 67- XOR Gate
         "The background area where the Sprite moves in Scratch:", // 68- Stage
         "Different 'looks' or frames for a Sprite are called:", // 69- Costumes
         "Block used to repeat actions forever in Scratch:", // 70- Forever Loop
         "The 'yellow' block category in Scratch usually handles:", // 71- Events
-        "The operator for 'Logical NOT' in C++ is:", // 72-
+        "The operator for 'Logical NOT' in C++ is:", // 72- !
     ];
 
     let currentIdx = 0;
