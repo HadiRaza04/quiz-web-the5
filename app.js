@@ -1,46 +1,45 @@
-    const questions = [
-        "Graphical representation of an algorithm is called:",  // 1- Flowchart
-        "A finite set of steps to solve a problem is:", // 2- Algorithm
-        "The symbol used for \"Decision\" in flowcharts:", // 3- Diamond
-        "A good algorithm should always be:", // 4- Efficient
-        "\"LIFO\" (Last In First Out) principle is used in:", // 5- Stack
-        "\"FIFO\" (First In First Out) principle belongs to:", // 6- Queue
-        "\"Indexing\" is a primary feature of:", // 7- Arrays
-        "Hierarchical data structure (Non-Linear) is:", // 8- Tree
-        "Translates code line-by-line:", // 9- Interpreter
-        "Converts Assembly language to Machine code:", /// 10- Assembler
-        "Logical error in a program is also known as a:", // 11- Bug
-        "Component of IDE used to find and fix errors:", // 12- Debugger
-        "\"Reserved words\" are also known as:", // 13- Keywords
-        "Size of 'int' data type in C++ (standard):", // 14- 4 bytes
-        "A value that cannot be changed during execution:", // 15- Constant
-        "Valid variable name starts with:", // 16- Letter or underscore
-        "Operator used for \"Remainder\":", // 17- Modulo (%)
-        "\\n is an escape sequence used for:", /// 18-  New line
-        "&& and || are examples of:", // 19- Logical operators
-        "Symbols for \"Single line comment\" in C++:", // 20- //
-        "\"Iteration\" is another name for:", // 21- Loop
-        "This statement terminates the loop immediately:", // 22-  Break
-        "Loop that executes at least once:", // 23- Do-While
-        "\"Multi-way branching\" statement:", // 24- Switch
-        "Variables declared inside a function:", // 25- Local variables
-        "Values passed to a function are called:", // 26- Arguments
-        "main() in C++ is a:", // 27 -Function
-        "Which gate is known as an \"Inverter\"?", // 28- NOT gate
-        "The \"Universal Gate\" is:", // 29- NAND gate
-        "In Boolean Algebra, A · A equals:", // 30- A
-        "Result of OR gate is 0 only when:", // 31- Both inputs are 0
-        "Characters or objects in Scratch are called:", // 32- Sprites
-        "Where we drag blocks to create code in Scratch:", // 33- Scripts area
-        "Instruction blocks are connected like:", // 34- jigsaw pieces
-        "\"Push\" and \"Pop\" operations are used in",  // 35- stack
+   const questions = [
         "The parallelogram symbol in a flowchart represents:", // 36- input /output
-        "Standardized English-like statements to describe an algorithm:", // 37- Algorithm
+        "Standardized English-like statements to describe an algorithm:", // 37- Pseudo-code
         "Non-linear structure consisting of vertices and edges:", // 38- Graph
         "Symbol used to end most C++ statements:", // 39- Semicolon (;)
-        "Jump statement used to transfer control to a labeled part of the program:", //  40-  Goto
+        "Jump statement used to transfer control to a labeled part of the program:", // 40- Goto
         "The \"return type\" of a function that does not return any value:", // 41- void
         "The block category used to move a Sprite:", // 42- Motion
+        "The 'Oval' symbol in a flowchart represents:", // 43- Start / End
+        "The 'Rectangle' symbol in a flowchart is used for:", // 44- Processing
+        "Adding an element to the top of a stack is called:", // 45- Push
+        "Removing an element from a queue is known as:", // 46- Dequeue
+        
+        "A tree node that has no children is called a:", // 47- Leaf node
+        "The top-most node of a tree structure is the:", // 48- Root
+        "A mistake in the 'grammar' rules of a programming language is a:", // 49- Syntax Error
+        "Translates the entire program at once into machine code:", // 50- Compiler
+        "An error that causes a program to crash during execution:", // 51- Runtime Error
+        "Finding and fixing 'Bugs' in a program is called:", // 52- Debugging
+        "Size of 'char' data type in C++ (standard):", // 53- 1 byte
+        "Size of 'double' data type in C++ (standard):", // 54- 8 bytes
+        "Keyword used to define a constant value in C++:", // 55- const
+        "The operator used to compare if two values are equal:", // 56- ==
+        "The escape sequence used for a horizontal tab:", // 57- \t
+        "Operator used to decrease a variable's value by 1:", // 58- Decrement (--)
+        "The 'default' case belongs to which control statement:", // 59- Switch
+        "A loop that checks the condition after the body executes:", // 60- Do-While
+        "Header file required for using cin and cout:", // 61- iostream
+        "Variables that can be accessed from any part of the program:", // 62- Global variables
+        "Gate that gives output 1 if any one input is 1:", // 63- OR Gate
+        "The Boolean law where A + 0 = A is called:", // 64- Identity Law
+        "Gate formed by combining AND and NOT gates:", // 65- NAND Gate
+        
+
+
+        "The algebraic expression for a NOT gate is usually:", // 66- A' (A bar)
+        "Gate that outputs 1 only when inputs are different:", // 67- XOR Gate
+        "The background area where the Sprite moves in Scratch:", // 68- Stage
+        "Different 'looks' or frames for a Sprite are called:", // 69- Costumes
+        "Block used to repeat actions forever in Scratch:", // 70- Forever Loop
+        "The 'yellow' block category in Scratch usually handles:", // 71- Events
+        "The operator for 'Logical NOT' in C++ is:", // 72-
     ];
 
     let currentIdx = 0;
